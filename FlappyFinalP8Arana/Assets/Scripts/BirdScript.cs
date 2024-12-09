@@ -34,8 +34,9 @@ public class BirdScript : MonoBehaviour
 
      void OnCollisionEnter2D()
     {
+        rb2d.velocity = Vector2.zero;
         isDead = true;
         anim.SetTrigger("Dead");
-        GameControl.instance.BirdDied();
+        GameControl.instance.BirdDied ();
     }
 }
